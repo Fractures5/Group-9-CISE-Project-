@@ -8,7 +8,7 @@ const app = express();
 // Connect Database
 connectDB();
 
-app.get('/', (req, res) => res.send('This is the initial setup for Group 9 CISE SPEED Project Stream 50'));
+app.get('/', (req, res) => res.send('This is the initial setup for Group 9 CISE SPEED Project Stream 50 - Successfully Deployed!'));
 
 const port = process.env.PORT || 8082;
 
