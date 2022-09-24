@@ -14,7 +14,7 @@ connectDB();
 
 app.use(express.static(path.join(__dirname, "./cise-speed-app/build")))
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "cise-speed-app", "build", "index.html"))
+    res.sendFile(path.join(__dirname, "cise-speed-app", "build", "App.js"))
 })
 
 const port = process.env.PORT || 5000;
