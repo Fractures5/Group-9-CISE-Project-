@@ -1,0 +1,1 @@
+// This is suggest article page which will have the form for the submitter to suggest a new article/practice
