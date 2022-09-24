@@ -1,9 +1,11 @@
 // app.js
-
+require('dotenv').config({ path: "./env"});
 const express = require('express');
 const connectDB = require('./config/db');
-
+var cors = require('cors');
 const app = express();
+const path =  require('path');
+const { response } = require('express');
 
 // Connect Database
 connectDB();
