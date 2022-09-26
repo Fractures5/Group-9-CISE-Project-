@@ -1,0 +1,1 @@
+//This is the home-page.js file that will be the splashscreen for the SPEED application
