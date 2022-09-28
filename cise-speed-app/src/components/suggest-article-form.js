@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const SubmissionForm = () => {
+const suggestArticleForm = () => {
   const { register, handleSubmit } = useForm();
   const [result, setResult] = useState("");
   const onSubmit = (data) => setResult(JSON.stringify(data));
@@ -26,4 +26,4 @@ const SubmissionForm = () => {
     </form>
   );
 }
-export default SubmissionForm;
+export default suggestArticleForm;
