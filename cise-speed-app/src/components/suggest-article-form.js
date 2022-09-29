@@ -11,14 +11,20 @@ const SuggestArticleForm = () => {
     
       <input {...register("title")} placeholder="Title" />
       <p><input {...register("authors")} placeholder="Authors" /></p>
-      <p><input {...register("source")} placeholder="Source" /></p> 
-      <p><input {...register("pubyear")} placeholder="Publication Year" /></p>
+      <p><input {...register("journalName")} placeholder="Journal Name" /></p>
+      <p><input {...register("pubyear")} placeholder="Year of Publication" /></p>
+      <p><input {...register("volume")} placeholder="Volume" /></p> 
+      <p><input {...register("volume")} placeholder="Number" /></p> 
+      <p><input {...register("pages")} placeholder="Pages" /></p>
       <p><input {...register("doi")} placeholder="DOI" /></p>
+
      
       <select {...register("sepractice")}>
         <option value="">Select SE practice...</option>
         <option value="TDD">TDD</option>
-        <option value="Mob Programming">Mob Programmin</option>
+        <option value="Mob Programming">Mob Programming</option>
+        <option value="Mob Programming">Pair Programming</option>
+        <option value="Mob Programming">Agile Development</option>
       </select>
       
       <p>{result}</p>

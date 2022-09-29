@@ -14,9 +14,6 @@ const App = () => {
           <li>
             <NavLink exact to="/SuggestArticle">Suggest Article</NavLink>
           </li>
-          <li>
-            <NavLink to="/SuggestArticle">Select the Practice</NavLink>
-          </li>
         </ul>
         <div className="content">
           <Route path="/SuggestArticle" component={SuggestArticle} />
