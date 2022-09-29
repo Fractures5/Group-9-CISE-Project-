@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from "react"
+import { Route, NavLink, BrowserRouter as Router} from "react-router-dom";
+
+import SuggestArticle from "./pages/suggest-article-page";
 import './App.css';
+
 //App.js
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React test test test
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <h1>Software Practice Empirical Evidence Database (SPEED)</h1>
+        <ul className="header">
+          <li>
+            <NavLink exact to="/SuggestArticle">Suggest Article</NavLink>
+          </li>
+          <li>
+            <NavLink to="/SuggestArticle">Select the Practice</NavLink>
+          </li>
+        </ul>
+        <div className="content">
+          <Route path="/SuggestArticle" component={SuggestArticle} />
+        </div>
+      </div>
+    </Router>
   );
 }
-
 export default App;
+
+
