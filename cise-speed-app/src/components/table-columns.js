@@ -1,4 +1,4 @@
-const tablecolumns = [
+const Tablecolumns = [
   {
     Header: "Title",
     accessor: "title",
@@ -29,4 +29,4 @@ const tablecolumns = [
   },
 ];
 
-module.exports = tablecolumns;
+module.exports = Tablecolumns;
