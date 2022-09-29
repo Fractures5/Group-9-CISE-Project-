@@ -1,5 +1,6 @@
 //This is the home-page.js file that will be the splashscreen for the SPEED application
 
+import React from "react";
 import Styles from "../components/table-style.js";
 // import Table from "../components/evidence-table.js";
 // import tablecolumns from "../components/table-columns.js";
