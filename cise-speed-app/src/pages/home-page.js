@@ -3,7 +3,7 @@
 import React from "react";
 import articles from "../dummydata/articles.js";
 import Styles from "../components/table-style.js";
-// import Table from "../components/evidence-table.js";
+import Table from "../components/evidence-table.js";
 import Tablecolumns from "../components/table-columns.js";
 import Dropdown from "../components/dropdown.js";
 
@@ -13,7 +13,7 @@ const Home = () => {
       <h2>Select SE Practice to get evidence for the claimed benefits</h2>
       <Dropdown />
       <Styles>
-        {/* <Table data={articles} columns={Tablecolumns} /> */}
+        <Table data={articles} columns={Tablecolumns} />
       </Styles>
     </div>
   );
