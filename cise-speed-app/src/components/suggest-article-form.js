@@ -23,10 +23,14 @@ const SuggestArticleForm = () => {
         <option value="">Select SE practice...</option>
         <option value="TDD">TDD</option>
         <option value="Mob Programming">Mob Programming</option>
-        <option value="Mob Programming">Pair Programming</option>
-        <option value="Mob Programming">Agile Development</option>
+        <option value="Pair Programming">Pair Programming</option>
+        <option value="Agile Development">Agile Development</option>
       </select>
-      
+
+      <br></br>
+      <br></br>
+      <p>Upload TextFile in BibTex format</p>
+      <input type="file" accept=".txt" name="picture"/>
       <p>{result}</p>
       <input type="submit" />
     </form>
