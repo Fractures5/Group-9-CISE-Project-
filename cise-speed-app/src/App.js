@@ -9,13 +9,13 @@ const App = () => {
       <div>
         <h1>Software Practice Empirical Evidence Database (SPEED)</h1>
          <ul className="header">
-          <li><NavLink exact to="/Home">Home</NavLink></li>
+          <li><NavLink exact to="/">Home</NavLink></li>
           <li><NavLink exact to="/Home">Suggest Article</NavLink></li>
           <li><NavLink exact to="/Home">Backend</NavLink></li>
           <li><NavLink to="/Home">Select the Practice</NavLink></li>
         </ul>
         <div className="content">
-          <Route exact path="/Home" component={Home} />
+          <Route exact path="/" component={Home} />
         </div>
       </div>
     </Router>
