@@ -44,6 +44,7 @@ class SuggestArticleForm extends Component {
     axios
       .post('http://localhost:8082/api/articleRoutes', data)
       .then(res => {
+        alert("Press 'OK' to confirm submission and return to the suggest article page");
         this.setState({
           title:'',
           author:'',
@@ -83,6 +84,7 @@ class SuggestArticleForm extends Component {
                     className='form-control'
                     value={this.state.title}
                     onChange={this.onChange}
+                    required
                   />
                 </div>
 

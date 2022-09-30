@@ -21,18 +21,23 @@ const SuggestArticleSchema = new mongoose.Schema({
   },
   articleVolume: {
     type: String,
+    required: true
   },
   articleNumber: {
     type: String,
+    required: true
   },
   articlePages: {
     type: String,
+    required: true
   },
   articleDOI: {
     type: String,
+    required: true
   },
   selectedSEPractice: {
     type: String,
+    required: true
   },
   articleBibtex: {
     type: String

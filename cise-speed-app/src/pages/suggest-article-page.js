@@ -10,6 +10,7 @@ const SuggestArticle = () =>  {
             <h2>Submit Article</h2>
                 <p>This form allows submitters to submit an article for possible 
                     inclusion in our SPEED application.</p>
+                <p>Please fill in all the fields (except BibTex optional)</p>
                     <br></br>
                 <SuggestArticleForm/>
         </div>
