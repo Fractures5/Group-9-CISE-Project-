@@ -84,7 +84,6 @@ class SuggestArticleForm extends Component {
                     className='form-control'
                     value={this.state.title}
                     onChange={this.onChange}
-                    required
                   />
                 </div>
 
@@ -186,7 +185,7 @@ class SuggestArticleForm extends Component {
                   onChange={this.onChange}
                   />
                 </div>
-            
+                
                 <input
                     type="submit"
                     className="btn btn-outline-warning btn-block mt-4"
