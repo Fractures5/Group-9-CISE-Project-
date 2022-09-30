@@ -8,25 +8,45 @@ const tablecolumns = [
     accessor: "authors",
   },
   {
-    Header: "Source",
-    accessor: "source",
+    Header: "Journal Name",
+    accessor: "journalname",
   },
   {
-    Header: "Pub. Year",
+    Header: "Publication Year",
     accessor: "pubyear",
-  },
-  {
-    Header: "DOI",
-    accessor: "doi",
   },
   {
     Header: "Claimed Benefit",
     accessor: "claim",
   },
   {
-    Header: "Level of Evidence",
-    accessor: "evidence",
+    Header: "SE Practice",
+    accessor: "sepractice",
   },
+  {
+    Header: "Result of Evidence",
+    accessor: "evidenceresult",
+  },
+  {
+    Header: "Research Type",
+    accessor: "researchtype",
+  },
+  {
+    Header: "Type of Participant",
+    accessor: "participanttype",
+  },
+  {
+    Header: "Source",
+    accessor: "source",
+  },
+  {
+    Header: "DOI",
+    accessor: "doi",
+  },
+  // {
+  //   Header: "Level of Evidence",
+  //   accessor: "evidence",
+  // },
 ];
 
 module.exports = tablecolumns;
