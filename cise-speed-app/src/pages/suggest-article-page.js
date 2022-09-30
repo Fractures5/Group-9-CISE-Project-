@@ -6,10 +6,12 @@ import SuggestArticleForm from "../components/suggest-article-form.js";
 const SuggestArticle = () =>  {
     return (
     <div>
-        <h2>Submit Article</h2>
-            <p>This will be a form to allow submitters to submit an article for possible 
-                inclusion in our SPEED repo.</p>
-            <SuggestArticleForm/>
+        <div class="SuggestArticleForm">
+            <h2>Submit Article</h2>
+                <p>This will be a form to allow submitters to submit an article for possible 
+                    inclusion in our SPEED repo.</p>
+                <SuggestArticleForm/>
+        </div>
     </div>
     );
 };

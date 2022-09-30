@@ -82,7 +82,6 @@ class SuggestArticleForm extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-                <br />
 
                 <div className='form-group'>
                   <input
@@ -108,7 +107,7 @@ class SuggestArticleForm extends Component {
 
                 <div className='form-group'>
                   <input
-                    type='date'
+                    type='number'
                     placeholder='Publication Year'
                     name='publicationYear'
                     className='form-control'
@@ -129,7 +128,7 @@ class SuggestArticleForm extends Component {
                 </div>
                 <div className='form-group'>
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Article Number'
                     name='articleNumber'
                     className='form-control'
@@ -139,7 +138,7 @@ class SuggestArticleForm extends Component {
                 </div>
                 <div className='form-group'>
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Article Pages'
                     name='articlePages'
                     className='form-control'
