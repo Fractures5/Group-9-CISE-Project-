@@ -2,32 +2,28 @@ const mongoose = require('mongoose');
 
 const BackendArticleSchema = new mongoose.Schema({
   title: {
-    type: String,
-    required: true
+    type: String
   },
   author: {
-    type: String,
-    required: true
+    type: String
   },
   journalName: {
-    type: String,
-    required: true
+    type: String
   },
   publicationYear: {
-    type: String,
-    required: true
+    type: String
   },
   claim: {
-    type: String,
+    type: String
   },
   sePractice: {
-    type: String,
+    type: String
   },
   resultOfEvidence: {
-    type: String,
+    type: String
   },
   researchType: {
-    type: String,
+    type: String
   },
   typeOfParticipant: {
     type: String
