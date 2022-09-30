@@ -4,6 +4,7 @@ import Styles from "../components/table-style.js";
 import Table from "../components/evidence-table.js";
 import tablecolumns from "../components/table-columns.js";
 import Dropdown from "../components/dropdown.js";
+import FromPubYearDropdown from "../components/from-pubyear-dropdown.js";
 
 const Home = () => {
   return (
@@ -11,7 +12,9 @@ const Home = () => {
       <h2>Select SE Practice to get evidence for the claimed benefits</h2>
       <br></br>
       <Dropdown />
-      <Dropdown />
+      <br></br>
+      <FromPubYearDropdown />
+      <br></br>
       <Dropdown />
       <br></br>
       <Styles>

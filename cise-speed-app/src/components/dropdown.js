@@ -5,13 +5,6 @@ const optionItems = SEPractices.map((SEPractices) =>
   <option key={SEPractices.practice}>{SEPractices.practice}</option>
 );
 
-const fromPubYearOptionItems = SEPractices.map((SEPractices) => (
-  <option key={SEPractices.practice}>{SEPractices.practice}</option>
-));
-
-const toPubYearOptionItems = SEPractices.map((SEPractices) => (
-  <option key={SEPractices.practice}>{SEPractices.practice}</option>
-));
 const Dropdown = () => {
   return (
     <div>
@@ -20,11 +13,4 @@ const Dropdown = () => {
   )
 }
 
-const YearDropdown = () => {
-  return (
-    <div>
-      <select>{optionItems}</select>
-    </div>
-  );
-};
 export default Dropdown;
