@@ -5,6 +5,7 @@ import Table from "../components/evidence-table.js";
 import tablecolumns from "../components/table-columns.js";
 import Dropdown from "../components/dropdown.js";
 import FromPubYearDropdown from "../components/from-pubyear-dropdown.js";
+import ToPubYearDropdown from "../components/to-pubyear-dropdown.js";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       <br></br>
       <FromPubYearDropdown />
       <br></br>
-      <Dropdown />
+      <ToPubYearDropdown />
       <br></br>
       <Styles>
         <Table data={articles} columns={tablecolumns} />
