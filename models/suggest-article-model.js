@@ -37,4 +37,4 @@ const SuggestArticleSchema = new mongoose.Schema({
 });
 
 //Will add bibtext file upload text after research
-module.exports = ArticleSuggestion = mongoose.model('book', SuggestArticleSchema);
+module.exports = ArticleSuggestion = mongoose.model('article', SuggestArticleSchema);

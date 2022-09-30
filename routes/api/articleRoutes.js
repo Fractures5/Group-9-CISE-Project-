@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 // Load Book model
-const SuggestedArticle = require('../../models/suggest-article-model.js');
+const SuggestedArticle = require('../../models/suggest-article-model');
 
 // @route GET api/Submitted-Form-Details/Suggested-Articles
 // @description tests suggested articles route
@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 // @access Public
 router.post('/', (req, res) => {
     SuggestedArticle.create(req.body)
-    .then(book => res.json({ msg: 'suggested article added successfully' }))
+    .then(ArticleSuggestion => res.json({ msg: 'suggested article added successfully' }))
     .catch(err => res.status(400).json({ error: 'Unable to add this suggested article' }));
 });
 

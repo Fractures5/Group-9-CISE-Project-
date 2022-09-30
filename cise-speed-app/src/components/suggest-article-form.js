@@ -1,10 +1,47 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 const SuggestArticleForm = () => {
   const { register, handleSubmit } = useForm();
   const [result, setResult] = useState("");
-  const onSubmit = (data) => setResult(JSON.stringify(data));
+  // const onSubmit = (data) => setResult(JSON.stringify(data));
+
+  const onSubmit = e =>{
+    e.preventDefault();
+
+    const data = {
+      title: this.state.title,
+      author: this.state.author,
+      journalName: this.state.journalName,
+      publicationYear: this.state.publicationYear,
+      articleVolume: this.state.articleVolume,
+      articleNumber: this.state.articleNumber,
+      articlePages: this.state.articlePages,
+      articleDOI: this.state.articleDOI,
+      selectedSEPractice: this.state.selectedSEPractice
+    };
+
+    axios
+      .post('http://localhost:8082/api/articleRoutes', data)
+      .then(res => {
+        this.setState({
+          title: '',
+          author:'',
+          journalName:'',
+          publicationYear:'',
+          articleVolume:'',
+          articleNumber:'',
+          articlePages:'',
+          articleDOI:'',
+          selectedSEPractice:''
+        })
+        this.props.history.push('/');
+      })
+      .catch(err => {
+        console.log("Error in suggesting article!");
+      })
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
