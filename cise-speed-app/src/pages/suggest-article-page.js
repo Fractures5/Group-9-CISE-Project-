@@ -8,8 +8,9 @@ const SuggestArticle = () =>  {
     <div>
         <div class="SuggestArticleForm">
             <h2>Submit Article</h2>
-                <p>This will be a form to allow submitters to submit an article for possible 
-                    inclusion in our SPEED repo.</p>
+                <p>This form allows submitters to submit an article for possible 
+                    inclusion in our SPEED application.</p>
+                    <br></br>
                 <SuggestArticleForm/>
         </div>
     </div>

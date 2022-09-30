@@ -33,6 +33,9 @@ const SuggestArticleSchema = new mongoose.Schema({
   },
   selectedSEPractice: {
     type: String,
+  },
+  articleBibtex: {
+    type: String
   }
 });
 

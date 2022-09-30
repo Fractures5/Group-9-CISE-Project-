@@ -74,3 +74,10 @@ input[type=submit]{
   margin: 4px 0;
   box-sizing: border-box;
 }
+
+textarea[type=text]{
+  width: 25%;
+  height: 100px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}

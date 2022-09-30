@@ -16,7 +16,8 @@ class SuggestArticleForm extends Component {
       articleNumber:'',
       articlePages:'',
       articleDOI:'',
-      selectedSEPractice:''
+      selectedSEPractice:'',
+      articleBibtex:''
     };
   }
 
@@ -36,7 +37,8 @@ class SuggestArticleForm extends Component {
       articleNumber: this.state.articleNumber,
       articlePages: this.state.articlePages,
       articleDOI: this.state.articleDOI,
-      selectedSEPractice: this.state.selectedSEPractice
+      selectedSEPractice: this.state.selectedSEPractice,
+      articleBibtex: this.state.articleBibtex
     };
 
     axios
@@ -51,7 +53,8 @@ class SuggestArticleForm extends Component {
           articleNumber:'',
           articlePages:'',
           articleDOI:'',
-          selectedSEPractice:''
+          selectedSEPractice:'',
+          articleBibtex:''
         })
         this.props.history.push('/');
       })
@@ -67,9 +70,9 @@ class SuggestArticleForm extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Suggest Article</h1>
-              <p className="lead text-center">
+              {/* <p className="lead text-center">
                   Submit an Article
-              </p>
+              </p> */}
 
               <form noValidate onSubmit={this.onSubmit}>
                 <div className='form-group'>
@@ -126,6 +129,7 @@ class SuggestArticleForm extends Component {
                     onChange={this.onChange}
                   />
                 </div>
+
                 <div className='form-group'>
                   <input
                     type='number'
@@ -136,6 +140,7 @@ class SuggestArticleForm extends Component {
                     onChange={this.onChange}
                   />
                 </div>
+                
                 <div className='form-group'>
                   <input
                     type='number'
@@ -145,7 +150,9 @@ class SuggestArticleForm extends Component {
                     value={this.state.articlePages}
                     onChange={this.onChange}
                   />
-                </div><div className='form-group'>
+                </div>
+                
+                <div className='form-group'>
                   <input
                     type='text'
                     placeholder='Article DOI'
@@ -154,7 +161,9 @@ class SuggestArticleForm extends Component {
                     value={this.state.articleDOI}
                     onChange={this.onChange}
                   />
-                </div><div className='form-group'>
+                </div>
+                
+                <div className='form-group'>
                   <input
                     type='text'
                     placeholder='Selected SE Practice'
@@ -164,7 +173,18 @@ class SuggestArticleForm extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-
+                
+                <div className='form-group'>
+                  <textarea 
+                  type='text'
+                  placeholder='Paste BibTex file contents'
+                  name='articleBibtex'
+                  className='form-control'
+                  value={this.state.articleBibtex}
+                  onChange={this.onChange}
+                  />
+                </div>
+            
                 <input
                     type="submit"
                     className="btn btn-outline-warning btn-block mt-4"
