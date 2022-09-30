@@ -9,10 +9,15 @@ const Home = () => {
   return (
     <div>
       <h2>Select SE Practice to get evidence for the claimed benefits</h2>
+      <br></br>
       <Dropdown />
+      <Dropdown />
+      <Dropdown />
+      <br></br>
       <Styles>
         <Table data={articles} columns={tablecolumns} />
       </Styles>
+      <br></br>
     </div>
   );
 };
