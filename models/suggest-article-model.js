@@ -15,18 +15,18 @@ const SuggestArticleSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  publciationYear: {
-    type: Number,
+  publicationYear: {
+    type: String,
     required: true
   },
   articleVolume: {
-    type: Number,
+    type: String,
   },
   articleNumber: {
-    type: Number,
+    type: String,
   },
   articlePages: {
-    type: Number,
+    type: String,
   },
   articleDOI: {
     type: String,
@@ -37,4 +37,4 @@ const SuggestArticleSchema = new mongoose.Schema({
 });
 
 //Will add bibtext file upload text after research
-module.exports = ArticleSuggestion = mongoose.model('article', SuggestArticleSchema);
+module.exports = ArticleSuggestion = mongoose.model('submittedformdetails', SuggestArticleSchema);

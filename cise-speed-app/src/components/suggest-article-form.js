@@ -8,7 +8,7 @@ class SuggestArticleForm extends Component {
   constructor() {
     super();
     this.state = {
-      title: '',
+      title:'',
       author:'',
       journalName:'',
       publicationYear:'',
@@ -43,7 +43,7 @@ class SuggestArticleForm extends Component {
       .post('http://localhost:8082/api/articleRoutes', data)
       .then(res => {
         this.setState({
-          title: '',
+          title:'',
           author:'',
           journalName:'',
           publicationYear:'',
