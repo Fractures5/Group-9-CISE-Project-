@@ -1,7 +1,3 @@
 {
-<<<<<<< HEAD
-    "mongoURI": "mongodb+srv://group9user:yIU6QrPgW5MUat7G@speed-cluster.e1joi4m.mongodb.net/?retryWrites=true&w=majority"
-=======
     "mongoURI": "mongodb+srv://group9user:yIU6QrPgW5MUat7G@speed-cluster.e1joi4m.mongodb.net/Suggested-Articles?retryWrites=true&w=majority"
->>>>>>> abdc65cb31d9c293fa525da398333b0d513ea028
 }
