@@ -7,7 +7,11 @@ var cors = require('cors');
 //const { response } = require('express');
 
 // routes
+<<<<<<< HEAD
 const articles = require('../routes/api/articleRoutes');
+=======
+const articles = require('../routes/api/backendArticleRoutes');
+>>>>>>> da14fa9ef6f348489a47a630d628b0054b7e3774
 const app = express();
 
 // Connect Database
@@ -27,7 +31,7 @@ app.use(express.json({extended: false}));
 app.get('/', (req, res) => res.send('Testing database submission form'));
 
 // Use routes
-app.use('/api/articleRoutes', articles);
+app.use('/api/backendArticleRoutes', articles);
 
 const port = process.env.PORT || 8082;
 
