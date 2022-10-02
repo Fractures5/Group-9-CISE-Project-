@@ -1,13 +1,4 @@
 // app.js
-<<<<<<< HEAD
-require('dotenv').config({ path: "./env"});
-const express = require('express');
-const connectDB = require('./config/db');
-var cors = require('cors');
-const app = express();
-const path =  require('path');
-const { response } = require('express');
-=======
 //require('dotenv').config({ path: "./env"});
 const express = require('express');
 const connectDB = require('../config/db');
@@ -16,23 +7,13 @@ var cors = require('cors');
 //const { response } = require('express');
 
 // routes
-<<<<<<< HEAD
-const articles = require('../routes/api/articleRoutes');
-=======
-const articles = require('../routes/api/backendArticleRoutes');
->>>>>>> da14fa9ef6f348489a47a630d628b0054b7e3774
+const suggestArticles = require('../routes/api/articleRoutes');
+const backendArticles = require('../routes/api/backendArticleRoutes');
 const app = express();
->>>>>>> abdc65cb31d9c293fa525da398333b0d513ea028
 
 // Connect Database
 connectDB();
 
-<<<<<<< HEAD
-app.use(express.static(path.join(__dirname, "./cise-speed-app/build")))
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "cise-speed-app", "build", "index.html"))
-})
-=======
 //cors
 app.use(cors({origin: true, credentials: true}));
 
@@ -47,8 +28,8 @@ app.use(express.json({extended: false}));
 app.get('/', (req, res) => res.send('Testing database submission form'));
 
 // Use routes
-app.use('/api/backendArticleRoutes', articles);
->>>>>>> abdc65cb31d9c293fa525da398333b0d513ea028
+app.use('/api/articleRoutes', suggestArticles);
+app.use('/api/backendArticleRoutes', backendArticles);
 
 const port = process.env.PORT || 8082;
 
