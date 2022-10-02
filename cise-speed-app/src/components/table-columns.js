@@ -36,17 +36,9 @@ const tablecolumns = [
     accessor: "participanttype",
   },
   {
-    Header: "Source",
-    accessor: "source",
-  },
-  {
     Header: "DOI",
     accessor: "doi",
   },
-  // {
-  //   Header: "Level of Evidence",
-  //   accessor: "evidence",
-  // },
 ];
 
 module.exports = tablecolumns;

@@ -12,12 +12,17 @@ const Home = () => {
     <div>
       <h2>Select SE Practice to get evidence for the claimed benefits</h2>
       <br></br>
-      <Dropdown />
-      <br></br>
-      <FromPubYearDropdown />
-      <br></br>
-      <ToPubYearDropdown />
-      <br></br>
+      <div>
+        <p>SE Practice</p>
+        <Dropdown />
+        <br></br>
+        <p>From Publication Year</p>
+        <FromPubYearDropdown />
+        <br></br>
+        <p>To Publication Year</p>
+        <ToPubYearDropdown />
+        <br></br>
+      </div>
       <Styles>
         <Table data={articles} columns={tablecolumns} />
       </Styles>

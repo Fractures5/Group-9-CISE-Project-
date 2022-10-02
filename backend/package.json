@@ -1,5 +1,38 @@
 {
+  "name": "group9_cise_speed_project",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000G\u0000r\u0000o\u0000u\u0000p\u00009\u0000_\u0000C\u0000I\u0000S\u0000E\u0000_\u0000S\u0000P\u0000E\u0000E\u0000D\u0000_\u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix cise-speed-app && npm run build --prefix cise-speed-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fractures5/Group-9-CISE-SPEED-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fractures5/Group-9-CISE-SPEED-Project/issues"
+  },
+  "homepage": "https://github.com/Fractures5/Group-9-CISE-SPEED-Project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "dependencies": {
-    "react-router-dom": "^6.4.0"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.6",
+    "validation": "^0.0.1"
   }
 }
