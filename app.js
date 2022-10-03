@@ -1,4 +1,4 @@
-// app.js file
+// app.js File
 require('dotenv').config({ path: "./env"});
 const express = require('express');
 const connectDB = require('./config/db');
