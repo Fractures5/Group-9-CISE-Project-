@@ -2,10 +2,10 @@
   "name": "group9_cise_speed_project",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000G\u0000r\u0000o\u0000u\u0000p\u00009\u0000_\u0000C\u0000I\u0000S\u0000E\u0000_\u0000S\u0000P\u0000E\u0000E\u0000D\u0000_\u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
-  "main": "./backend/app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./backend/app.js",
-    "app": "nodemon ./backend/app.js",
+    "start": "node app.js",
+    "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix cise-speed-app && npm run build --prefix cise-speed-app"
   },
