@@ -1,14 +1,14 @@
 // app.js
 require('dotenv').config({ path: "./env"});
 const express = require('express');
-const connectDB = require('../config/db');
+const connectDB = require('./config/db');
 var cors = require('cors');
 const path =  require('path');
 const { response } = require('express');
 
 // routes
-const suggestArticles = require('../routes/api/articleRoutes');
-const backendArticles = require('../routes/api/backendArticleRoutes');
+const suggestArticles = require('./routes/api/articleRoutes');
+const backendArticles = require('./routes/api/backendArticleRoutes');
 const app = express();
 
 // Connect Database
