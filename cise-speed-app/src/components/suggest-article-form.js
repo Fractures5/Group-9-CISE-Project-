@@ -17,7 +17,7 @@ class SuggestArticleForm extends Component {
       articlePages:'',
       articleDOI:'',
       selectedSEPractice:'',
-      articleBibtex:''
+      // articleBibtex:''
     };
   }
 
@@ -38,7 +38,7 @@ class SuggestArticleForm extends Component {
       articlePages: this.state.articlePages,
       articleDOI: this.state.articleDOI,
       selectedSEPractice: this.state.selectedSEPractice,
-      articleBibtex: this.state.articleBibtex
+      // articleBibtex: this.state.articleBibtex
     };
 
     axios
@@ -55,7 +55,7 @@ class SuggestArticleForm extends Component {
           articlePages:'',
           articleDOI:'',
           selectedSEPractice:'',
-          articleBibtex:''
+          // articleBibtex:''
         })
         this.props.history.push('/');
       })
@@ -172,7 +172,7 @@ class SuggestArticleForm extends Component {
                   />
                 </div>
                 
-                <div className='form-group'>
+                {/* <div className='form-group'>
                   <textarea 
                   type='text'
                   placeholder='Paste BibTex file contents'
@@ -181,7 +181,7 @@ class SuggestArticleForm extends Component {
                   value={this.state.articleBibtex}
                   onChange={this.onChange}
                   />
-                </div>
+                </div> */}
                 
                 <input
                     type="submit"
