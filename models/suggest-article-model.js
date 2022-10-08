@@ -38,10 +38,10 @@ const SuggestArticleSchema = new mongoose.Schema({
   selectedSEPractice: {
     type: String,
     required: true
+  },
+  articleBibtex: {
+    type: String
   }
-  // articleBibtex: {
-  //   type: String
-  // }
 });
 
 //Will add bibtext file upload text after research
