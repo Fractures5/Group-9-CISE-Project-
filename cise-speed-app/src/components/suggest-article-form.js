@@ -42,7 +42,7 @@ class SuggestArticleForm extends Component {
     };
 
     axios
-      .post('https://group9-cise-speed-app.herokuapp.com', data)
+      .post('https://group9-cise-speed-app.herokuapp.com/api/articleRoutes', data)
       .then(res => {
         alert("Press 'OK' to confirm submission and return to the suggest article page");
         this.setState({
@@ -60,7 +60,7 @@ class SuggestArticleForm extends Component {
         this.props.history.push('/');
       })
       .catch(err => {
-        console.log("Error in suggesting article!");
+        console.log(err);
       })
   };
 

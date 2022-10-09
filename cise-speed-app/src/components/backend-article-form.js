@@ -56,7 +56,7 @@ class BackendArticleForm extends Component {
         this.props.history.push('/');
       })
       .catch(err => {
-        console.log("Error in Backend article submission!");
+        console.log(err);
       })
   };
 
