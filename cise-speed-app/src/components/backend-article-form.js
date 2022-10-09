@@ -40,7 +40,7 @@ class BackendArticleForm extends Component {
     };
 
     axios
-      .post('https://group9-cise-speed-app.herokuapp.com', data)
+      .post('https://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes', data)
       .then(res => {
         this.setState({
           title:'',
