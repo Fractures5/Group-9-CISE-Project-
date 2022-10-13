@@ -14,7 +14,7 @@ router.get('/Suggested-Articles', (req, res) => res.send('backend articles route
 //@route GET api/Submitted-Form-Details
 //@description Get all suggested articles
 //@access Public
-router.get('/', (req, res) => {
+router.get('/Suggested-Articles', (req, res) => {
     BackendArticles.find()
     .then(speedarticles => res.json(books))
     .catch(err => res.status(404).json({ nobooksfound: 'No backend articles found' }));
