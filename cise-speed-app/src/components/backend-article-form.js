@@ -40,7 +40,7 @@ class BackendArticleForm extends Component {
     };
 
     axios
-      .post('http://localhost:8082/api/backendArticleRoutes', data)
+      .post('https://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes', data)
       .then(res => {
         this.setState({
           title:'',
@@ -56,7 +56,7 @@ class BackendArticleForm extends Component {
         this.props.history.push('/');
       })
       .catch(err => {
-        console.log("Error in Backend article submission!");
+        console.log(err);
       })
   };
 
