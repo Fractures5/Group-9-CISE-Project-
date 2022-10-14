@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 // Load article model
-const BackendArticles = require('../../models/backend-article-model');
+const BackendArticles = require('../../models/backend-article-model.js');
 
 // @route GET api/Submitted-Form-Details/Suggested-Articles
 // @description tests suggested articles route
@@ -16,7 +16,7 @@ router.get('/Suggested-Articles', (req, res) => res.send('backend articles route
 //@access Public
 router.get('/', (req, res) => {
     BackendArticles.find()
-    .then(speedarticles => res.json(books))
+    .then(speedarticles => res.json(articles))
     .catch(err => res.status(404).json({ nobooksfound: 'No backend articles found' }));
 });
 
