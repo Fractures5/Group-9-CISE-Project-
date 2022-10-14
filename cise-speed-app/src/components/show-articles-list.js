@@ -8,13 +8,13 @@ class ShowArticlesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: [],
+      articles: []
     };
   }
 
   componentDidMount() {
     axios
-      .get("https://group9-cise-speed-app.herokuapp.com/api/articleRoutes")
+      .get("http://localhost:8082/api/backendArticleRoutes")
       .then((res) => {
         this.setState({
           articles: res.data
@@ -27,7 +27,7 @@ class ShowArticlesList extends Component {
 
 
   render() {
-    const articles = this.state.article;
+    const articles = this.state.articles;
     console.log("PrintBook: " + articles);
     let articleList;
 
