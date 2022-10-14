@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ArticleCard from './article-card';
 
 class ShowArticlesList extends Component {
@@ -46,7 +46,6 @@ class ShowArticlesList extends Component {
               <h2 className="display-4 text-center">Articles List</h2>
             </div>
           </div>
-
           <div className="list">{articleList}</div>
         </div>
       </div>
