@@ -14,10 +14,10 @@ class ShowArticlesList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/articleRoutes')
+      .get('http://localhost:8082/api/backendArticleRoutes')
       .then(res => {
         this.setState({
-            article: res.data
+            articles: res.data
         })
       })
       .catch(err =>{
@@ -45,11 +45,8 @@ class ShowArticlesList extends Component {
           <div className="row">
             <div className="col-md-12">
               <br />
-              <h2 className="display-4 text-center">Books List</h2>
+              <h2 className="display-4 text-center">Articles List</h2>
             </div>
-
-            
-
           </div>
 
           <div className="list">

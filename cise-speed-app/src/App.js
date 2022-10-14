@@ -20,10 +20,10 @@ const App = () => {
           <li><NavLink to="/ShowArticlesList">Show Articles</NavLink></li>
         </ul>
         <div className="content">
-          <Route exact path="/" component={ShowDBArticles} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/SuggestArticleForm" component={SuggestArticle} />
           <Route exact path="/BackendArticleForm" component={BackendArticle} />
-          <Route root path="/ShowArticlesList" component={ShowDBArticles} />
+          <Route exact path="/ShowArticlesList" component={ShowDBArticles} />
           <Route exact path="/404" component={NotFoundPage} />
           {/* <Redirect to="/404" /> */}
         </div>

@@ -16,7 +16,7 @@ router.get('/Suggested-Articles', (req, res) => res.send('backend articles route
 //@access Public
 router.get('/', (req, res) => {
     BackendArticles.find()
-    .then(speedarticles => res.json(books))
+    .then(backendArticleRoutes => res.json(backendArticleRoutes))
     .catch(err => res.status(404).json({ nobooksfound: 'No backend articles found' }));
 });
 
