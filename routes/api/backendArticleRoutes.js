@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 // Load article model
-const BackendArticles = require('../../models/backend-article-model');
+const BackendArticles = require('../../models/backend-article-model.js');
 
 // @route GET api/Submitted-Form-Details/Suggested-Articles
 // @description tests suggested articles route

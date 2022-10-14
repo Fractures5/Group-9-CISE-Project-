@@ -7,7 +7,7 @@ const ArticleCard = (props) => {
 
     return(
         <div className="card-container">
-            <img src="https://commapress.co.uk/books/the-book-of-cairo/cairo-provisional-v3/image%2Fspan3" alt="" />
+            {/* <img src="https://commapress.co.uk/books/the-book-of-cairo/cairo-provisional-v3/image%2Fspan3" alt="" /> */}
             <div className="desc">
                 <p>Test</p>
                 <h2>
@@ -18,7 +18,7 @@ const ArticleCard = (props) => {
                 <h3>{article.author}</h3>
             </div>
         </div>
-    )
+    );
 };
 
 export default ArticleCard;

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import ArticleCard from './article-card';
 
 class ShowArticlesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: []
+      articles: [],
     };
   }
 
@@ -20,23 +20,21 @@ class ShowArticlesList extends Component {
             articles: res.data
         })
       })
-      .catch(err =>{
-        console.log('Error from ShowArticleList');
-      })
-  };
+      .catch((err) => {
+        console.log("Error from ShowArticleList");
+      });
+  }
 
 
   render() {
-    const articles = this.state.articles;
+    const articles = this.state.article;
     console.log("PrintBook: " + articles);
     let articleList;
 
     if(!articles) {
         articleList = "there is no book record!";
     } else {
-        articleList = articles.map((article, k) =>
-        <ArticleCard article={article} key={k} />
-      );
+        articleList = articles.map((article, k) => <ArticleCard article={article} key={k} />);
     }
 
     return (
@@ -49,9 +47,7 @@ class ShowArticlesList extends Component {
             </div>
           </div>
 
-          <div className="list">
-                {articleList}
-          </div>
+          <div className="list">{articleList}</div>
         </div>
       </div>
     );
