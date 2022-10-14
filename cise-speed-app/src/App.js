@@ -23,11 +23,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/SuggestArticleForm" component={SuggestArticle} />
           <Route exact path="/BackendArticleForm" component={BackendArticle} />
-<<<<<<< HEAD
           <Route exact path="/ShowArticlesList" component={ShowDBArticles} />
-=======
-          <Route root path="/ShowArticlesList" component={ShowArticlesList} />
->>>>>>> 571ae41220ea8c389ce3e7a39d8989e9ab97739e
           <Route exact path="/404" component={NotFoundPage} />
           {/* <Redirect to="/404" /> */}
         </div>
