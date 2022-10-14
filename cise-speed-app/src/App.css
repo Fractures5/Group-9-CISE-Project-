@@ -93,7 +93,7 @@ textarea[type=text]{
 
 
 /* BookList Styles */
-.list {
+/* .list {
   display: grid;
   margin: 20px 0 50px 0;
   grid-template-columns: repeat(4, 1fr);
@@ -127,4 +127,32 @@ textarea[type=text]{
   color: #6c757d;
   font-size: 1em;
   padding: 10px 0 10px 0;
+} */
+
+#articleTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#articleTable td,
+#articleTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#articleTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#articleTable tr:hover {
+  background-color: #ddd;
+}
+
+#articleTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }

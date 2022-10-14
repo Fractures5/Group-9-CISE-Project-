@@ -6,6 +6,8 @@ import tablecolumns from "../components/table-columns.js";
 import Dropdown from "../components/dropdown.js";
 import FromPubYearDropdown from "../components/from-pubyear-dropdown.js";
 import ToPubYearDropdown from "../components/to-pubyear-dropdown.js";
+import ShowArticlesList from "../components/show-articles-list.js";
+import ShowArticlesDB from "./show-articles.js";
 
 const Home = () => {
   return (

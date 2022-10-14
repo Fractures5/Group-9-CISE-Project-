@@ -1,3 +1,5 @@
+// import ShowArticlesDB from "../pages/show-articles";
+
 const articles = [
   {
     id: "1",
