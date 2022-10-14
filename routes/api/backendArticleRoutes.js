@@ -14,7 +14,7 @@ router.get('/Suggested-Articles', (req, res) => res.send('backend articles route
 //@route GET api/Submitted-Form-Details
 //@description Get all suggested articles
 //@access Public
-router.get('/Suggested-Articles', (req, res) => {
+router.get('/', (req, res) => {
     BackendArticles.find()
     .then(speedarticles => res.json(books))
     .catch(err => res.status(404).json({ nobooksfound: 'No backend articles found' }));
@@ -29,4 +29,4 @@ router.post('/', (req, res) => {
     .catch(err => res.status(400).json({ error: 'Unable to add this backend article' }));
 });
 
-module.exports = router;
+module.exports = router; 
