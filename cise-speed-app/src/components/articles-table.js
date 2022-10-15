@@ -11,9 +11,13 @@ const ArticlesTable = (props) => {
     
 
     return (
+<<<<<<< HEAD
       <div className ="searchArticles">
         <div className="tableContainer">
 
+=======
+      <div className="tableContainer">
+>>>>>>> ce5830cc532cb79010fc40e800492e938102f4dd
         <table id="articleTable">
           <tr>
             <td>{article.title}</td>
