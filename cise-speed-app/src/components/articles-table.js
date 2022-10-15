@@ -61,4 +61,4 @@ const ArticlesTable = (props) => {
     );
 };
 
-export default ArticleCard;
+export default ArticlesTable;
