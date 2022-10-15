@@ -1,13 +1,15 @@
-import React, { useMemo } from "react";
-import articles from "../dummydata/articles.js";
-import { useTable, useSortBy, usePagination } from "react-table";
+import React, { useState } from "react";
+//import articles from "../dummydata/articles.js";
+import { useTable, useSortBy, usePagination, useFilters } from "react-table";
 
 const Table = ({ columns, data }) => {
+  const [filterInput, setFilterInput] = useState("");
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     prepareRow,
+    setFilter,
 
     page, // Instead of using 'rows', we'll use page,
     // which has only the rows for the active page
@@ -29,13 +31,66 @@ const Table = ({ columns, data }) => {
       initialState: { pageIndex: 0 },
     },
 
+    useFilters,
     useSortBy,
     usePagination
   );
 
+  const handleFilterChange = e => {
+    const value = e.target.value || undefined;
+    setFilter("title", value); 
+    setFilterInput(value);
+  };
+
+  const handleSEPracticeChange = e => {
+    const value = e.target.value || undefined;
+    setFilter("sePractice", value); 
+    setFilterInput(value);
+  };
+
+  const handlePubYearsChange = e => {
+    const value = e.target.value || undefined;
+    setFilter("publicationYear", value); 
+    setFilterInput(value);
+  };
+
   // Render Data Table UI
   return (
     <>
+    <div className="searchArticleField">
+      <input
+          value={filterInput}
+          onChange={handleFilterChange}
+          placeholder={"Search Title"}
+        />
+    </div>
+      <select name="sePractices" id="sePractices" onChange={handleSEPracticeChange}>
+        <option value="">All SE Practices</option>
+        <option value="TDD">TDD</option>
+        <option value="Agile">Agile</option>
+        <option value="Mob Programming">Mob Programming</option>
+        <option value="BDD">BDD</option>
+        <option value="Pair Programming">Pair Programming</option>
+      </select>
+
+      <select name="sePractices" id="sePractices" onChange={handlePubYearsChange}>
+        <option value="">All Years</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+        
+      </select>
+    
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -76,6 +131,7 @@ const Table = ({ columns, data }) => {
 
       {/* Pagination */}
       <div className="pagination">
+        <br></br>
         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {"<<"}
         </button>{" "}
