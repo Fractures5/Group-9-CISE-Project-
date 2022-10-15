@@ -1,5 +1,4 @@
 //This is the home-page.js file that will be the splashscreen for the SPEED application
-import articles from "../dummydata/articles.js";
 import Styles from "../components/table-style.js";
 import Table from "../components/evidence-table.js";
 import tablecolumns from "../components/table-columns.js";
@@ -25,9 +24,6 @@ const Home = () => {
         <ToPubYearDropdown />
         <br></br>
       </div>
-      <Styles>
-        <Table data={articles} columns={tablecolumns} />
-      </Styles>
       <br></br>
     </div>
   );
