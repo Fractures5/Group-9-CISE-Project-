@@ -16,13 +16,6 @@ const Home = () => {
       <div>
         <p>SE Practice</p>
         <Dropdown />
-        <br></br>
-        <p>From Publication Year</p>
-        <FromPubYearDropdown />
-        <br></br>
-        <p>To Publication Year</p>
-        <ToPubYearDropdown />
-        <br></br>
       </div>
       <br></br>
     </div>
