@@ -83,12 +83,12 @@ textarea[type=text]{
 }
 
 .ShowBookList {
-  background-color: #2c3e50;
+  /* background-color: #2c3e50; */
   height: 100%;
   width: 100%;
   min-height: 100vh;
   min-width: 100px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -135,6 +135,8 @@ textarea[type=text]{
   width: 100%;
   table-layout: fixed;
   word-break: break-word;
+  /* border: 3px solid rgb(0, 0, 0); */
+
 }
 
 #articleTable td{
@@ -165,4 +167,9 @@ textarea[type=text]{
   text-align: left;
   background-color: #04AA6D;
   color: white;
+}
+
+.header-center{
+  text-align: center;
+  padding-bottom: 20px;
 }

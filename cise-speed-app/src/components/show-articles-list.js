@@ -44,8 +44,9 @@ class ShowArticlesList extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <br />
-              <h2 className="display-4 text-center">Articles List</h2>
+              <div className="header-center">
+                <h2 className="display-4 text-center">Articles List</h2>
+              </div>
               <table id="articleTable">
                 <tr>
                   <th>Title</th>
@@ -59,7 +60,6 @@ class ShowArticlesList extends Component {
                   <th>Type of Participant</th>
                 </tr>
               </table>
-              
             </div>
           </div>
           <div className="list">{articleList}</div>

@@ -34,7 +34,7 @@ const ArticlesTable = (props) => {
             <td>{article.researchType}</td>
             <td>{article.typeOfParticipant}</td>
           </tr>
-          <br></br>
+          {/* <br></br> */}
         </table>
       </div>
       //   <div className="card-container">
