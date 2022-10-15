@@ -5,23 +5,26 @@ import '../App.css';
 
 const ArticlesTable = (props) => {
     const article = props.article;
-    
+
     return (
-      <div className="tableContainer">
-        <table id="articleTable">
-          <tr>
-            <td>{article.title}</td>
-            <td>{article.author}</td>
-            <td>{article.journalName}</td>
-            <td>{article.publicationYear}</td>
-            <td>{article.claim}</td>
-            <td>{article.sePractice}</td>
-            <td>{article.resultOfEvidence}</td>
-            <td>{article.researchType}</td>
-            <td>{article.typeOfParticipant}</td>
-          </tr>
-          {/* <br></br> */}
-        </table>
+      <div className ="searchArticles">
+        <div className="tableContainer">
+
+          <table id="articleTable">
+            <tr>
+              <td>{article.title}</td>
+              <td>{article.author}</td>
+              <td>{article.journalName}</td>
+              <td>{article.publicationYear}</td>
+              <td>{article.claim}</td>
+              <td>{article.sePractice}</td>
+              <td>{article.resultOfEvidence}</td>
+              <td>{article.researchType}</td>
+              <td>{article.typeOfParticipant}</td>
+            </tr>
+            {/* <br></br> */}
+          </table>
+        </div>
       </div>
     
       //   <div className="card-container">
