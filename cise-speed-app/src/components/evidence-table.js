@@ -69,7 +69,7 @@ const Table = ({ columns, data }) => {
         <option value="TDD">TDD</option>
         <option value="Agile">Agile</option>
         <option value="Mob Programming">Mob Programming</option>
-        <option value="ATDD">ATDD</option>
+        <option value="BDD">BDD</option>
         <option value="Pair Programming">Pair Programming</option>
       </select>
 
