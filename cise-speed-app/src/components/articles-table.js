@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -22,19 +23,6 @@ const ArticlesTable = (props) => {
     return (
       <div className="test">
         <table id="articleTable">
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Journal Name</th>
-            <th>Publication Year</th>
-            <th>Claim</th>
-            <th>SE Practice</th>
-            <th>Evidence</th>
-            <th>Research Type</th>
-            <th>Type of Participant</th>
-            <br></br>
-          </tr>
-          <br></br>
           <tr>
             <td>{article.title}</td>
             <td>{article.author}</td>

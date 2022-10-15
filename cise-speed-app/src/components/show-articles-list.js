@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import ArticlesTable from './articles-table';
-=======
-import ArticlesTable from "./articles-table";
->>>>>>> 0b02cc0b16ebcc818e13c2f9e458762cf79c839c
 
 class ShowArticlesList extends Component {
   constructor(props) {
@@ -50,6 +46,20 @@ class ShowArticlesList extends Component {
             <div className="col-md-12">
               <br />
               <h2 className="display-4 text-center">Articles List</h2>
+              <table id="articleTable">
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Journal Name</th>
+                  <th>Publication Year</th>
+                  <th>Claim</th>
+                  <th>SE Practice</th>
+                  <th>Evidence</th>
+                  <th>Research Type</th>
+                  <th>Type of Participant</th>
+                </tr>
+              </table>
+              
             </div>
           </div>
           <div className="list">{articleList}</div>

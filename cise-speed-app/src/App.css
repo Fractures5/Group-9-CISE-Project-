@@ -133,9 +133,19 @@ textarea[type=text]{
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
 }
 
-#articleTable td,
+#articleTable td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#articleTable tr{
+  background-color:rgb(255, 255, 255);
+  color: black;
+}
 #articleTable th {
   border: 1px solid #ddd;
   padding: 8px;
@@ -146,7 +156,7 @@ textarea[type=text]{
 }
 
 #articleTable tr:hover {
-  background-color: #ddd;
+  background-color: rgb(191, 255, 223);
 }
 
 #articleTable th {
