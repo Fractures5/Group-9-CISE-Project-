@@ -21,7 +21,7 @@ const ArticlesTable = (props) => {
     // ];
 
     return (
-      <div className="test">
+      <div className="tableContainer">
         <table id="articleTable">
           <tr>
             <td>{article.title}</td>
