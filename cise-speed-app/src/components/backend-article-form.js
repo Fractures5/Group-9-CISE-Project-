@@ -42,6 +42,7 @@ class BackendArticleForm extends Component {
     axios
       .post('https://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes', data)
       .then(res => {
+        alert("Press 'OK' to confirm submission and return to the backend article submission form");
         this.setState({
           title:'',
           author:'',
