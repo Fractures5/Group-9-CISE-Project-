@@ -57,40 +57,46 @@ const Table = ({ columns, data }) => {
   // Render Data Table UI
   return (
     <>
-    <div className="searchArticleField">
-      <input
+      <div className="searchArticleField">
+        <input
           value={filterInput}
           onChange={handleFilterChange}
           placeholder={"Search Title"}
         />
-    </div>
-      <select name="sePractices" id="sePractices" onChange={handleSEPracticeChange}>
-        <option value="">All SE Practices</option>
-        <option value="TDD">TDD</option>
-        <option value="Agile">Agile</option>
-        <option value="Mob Programming">Mob Programming</option>
-        <option value="BDD">BDD</option>
-        <option value="Pair Programming">Pair Programming</option>
-      </select>
+      </div>
+      <div className="sePracticeDropdown">
+        <select
+          name="sePractices"
+          id="sePractices"
+          onChange={handleSEPracticeChange}
+        >
+          <option value="">All SE Practices</option>
+          <option value="TDD">TDD</option>
+          <option value="Agile">Agile</option>
+          <option value="Mob Programming">Mob Programming</option>
+          <option value="BDD">BDD</option>
+          <option value="Pair Programming">Pair Programming</option>
+        </select>
+      </div>
 
-      <select name="sePractices" id="sePractices" onChange={handlePubYearsChange}>
-        <option value="">All Years</option>
-        <option value="2022">2022</option>
-        <option value="2021">2021</option>
-        <option value="2020">2020</option>
-        <option value="2019">2019</option>
-        <option value="2018">2018</option>
-        <option value="2017">2017</option>
-        <option value="2016">2016</option>
-        <option value="2015">2015</option>
-        <option value="2014">2014</option>
-        <option value="2013">2013</option>
-        <option value="2012">2012</option>
-        <option value="2011">2011</option>
-        <option value="2010">2010</option>
-        
-      </select>
-    
+      <div className="pubYearsDropdown">
+        <select name="pubYears" id="pubYears" onChange={handlePubYearsChange}>
+          <option value="">All Years</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+        </select>
+      </div>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
