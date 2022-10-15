@@ -42,6 +42,12 @@ const Table = ({ columns, data }) => {
     setFilterInput(value);
   };
 
+  const handleSEPracticeChange = e => {
+    const value = e.target.value || undefined;
+    setFilter("sePractice", value); 
+    setFilterInput(value);
+  };
+
   // Render Data Table UI
   return (
     <>
@@ -52,6 +58,16 @@ const Table = ({ columns, data }) => {
           placeholder={"Search Title"}
         />
     </div>
+      <select name="sePractices" id="sePractices" onChange={handleSEPracticeChange}>
+        <option value="">All SE Practices</option>
+        <option value="TDD">TDD</option>
+        <option value="Agile">Agile</option>
+        <option value="Mob Programming">Mob Programming</option>
+        <option value="ATDD">ATDD</option>
+        <option value="Pair Programming">Pair Programming</option>
+
+      </select>
+    
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
