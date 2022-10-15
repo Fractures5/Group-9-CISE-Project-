@@ -1,17 +1,7 @@
 // App.js
 
-<<<<<<< HEAD
-class ShowArticlesList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      articles: []
-    };
-  }
-=======
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
->>>>>>> 26039a4eef6de6f5eca78728b67a34e28543faf4
 
 import Table from "../components/evidence-table.js";
 import "../App.css";
@@ -20,12 +10,6 @@ import Styles from "../components/table-style.js";
 function App() {
   const [data, setData] = useState([]);
 
-<<<<<<< HEAD
-  render() {
-    const articles = this.state.articles;
-    console.log("PrintBook: " + articles);
-    let articleList;
-=======
   const columns = useMemo(
     () => [
       {
@@ -72,7 +56,6 @@ function App() {
     ],
     []
   );
->>>>>>> 26039a4eef6de6f5eca78728b67a34e28543faf4
 
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {

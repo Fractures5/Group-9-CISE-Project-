@@ -14,7 +14,7 @@ const BackendArticleSchema = new mongoose.Schema({
     required: true
   },
   publicationYear: {
-    type: String,
+    type: Number,
     required: true
   },
   claim: {

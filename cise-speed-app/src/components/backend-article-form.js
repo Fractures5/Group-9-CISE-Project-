@@ -103,7 +103,7 @@ class BackendArticleForm extends Component {
 
                 <div className='form-group'>
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Publication Year'
                     name='publicationYear'
                     className='form-control'
