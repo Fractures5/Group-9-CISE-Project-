@@ -1,4 +1,3 @@
-
 // App.js
 
 import React, { useState, useEffect, useMemo } from "react";
@@ -7,6 +6,7 @@ import axios from "axios";
 import Table from "../components/evidence-table.js";
 import "../App.css";
 import Styles from "../components/table-style.js";
+import Dropdown from "../components/dropdown.js";
 
 function App() {
   const [data, setData] = useState([]);
@@ -68,6 +68,8 @@ function App() {
 
   return (
     <div className="App">
+      <p>SE Practice</p>
+      <Dropdown />
       <Styles>
         <Table columns={columns} data={data} />
       </Styles>

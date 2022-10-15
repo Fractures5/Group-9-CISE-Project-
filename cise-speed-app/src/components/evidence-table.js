@@ -92,6 +92,7 @@ const Table = ({ columns, data }) => {
 
       {/* Pagination */}
       <div className="pagination">
+        <br></br>
         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {"<<"}
         </button>{" "}
