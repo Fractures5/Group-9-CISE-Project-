@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import ArticlesTable from './articles-table';
+=======
+import ArticlesTable from "./articles-table";
+>>>>>>> 0b02cc0b16ebcc818e13c2f9e458762cf79c839c
 
 class ShowArticlesList extends Component {
   constructor(props) {
@@ -34,7 +38,9 @@ class ShowArticlesList extends Component {
     if(!articles) {
         articleList = "there is no book record!";
     } else {
-        articleList = articles.map((article, k) => <ArticlesTable article={article} key={k} />);
+        articleList = articles.map((article, k) => (
+          <ArticlesTable article={article} key={k} />
+        ));
     }
 
     return (
