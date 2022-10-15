@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const ArticleCard = (props) => {
+const ArticlesTable = (props) => {
     const article = props.article;
 
     // const articles = [
