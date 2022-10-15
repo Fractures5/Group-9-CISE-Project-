@@ -5,23 +5,15 @@ import '../App.css';
 
 const ArticlesTable = (props) => {
     const article = props.article;
+    
 
-    // const articles = [
-    //   {
-    //     title: article.title,
-    //     authors: article.author,
-    //     journalname: article.journalname,
-    //     pubyear: article.pubyear,
-    //     claim: article.claim,
-    //     sepractice: article.sepractice,
-    //     evidence: article.evidence,
-    //     participant: article.participant,
-    //     doi: article.doi,
-    //   },
-    // ];
+    
+    
 
     return (
-      <div className="test">
+      <div className ="searchArticles">
+        <div className="tableContainer">
+
         <table id="articleTable">
           <tr>
             <td>{article.title}</td>
@@ -36,7 +28,9 @@ const ArticlesTable = (props) => {
           </tr>
           {/* <br></br> */}
         </table>
+        </div>
       </div>
+    
       //   <div className="card-container">
       //     <div className="desc">
       //       <h2>
@@ -46,6 +40,7 @@ const ArticlesTable = (props) => {
       //       <h3>{article.author}</h3>
       //     </div>
       //   </div>
+      
     );
 };
 

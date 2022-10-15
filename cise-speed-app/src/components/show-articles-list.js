@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useState } from "react";
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -10,6 +11,31 @@ class ShowArticlesList extends Component {
     this.state = {
       articles: [],
     };
+
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+  }
+
+  handleKeyUp() {
+    console.log("getting triggerd");
+
+    var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("searchTitle");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("articleTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    console.log("reads bottom of function ");
+
   }
 
   componentDidMount() {
@@ -27,18 +53,18 @@ class ShowArticlesList extends Component {
 
 
   render() {
+    // const articles = this.state.articles;
+    // console.log("PrintBook: " + articles);
+    // let articleList;
+
+    // if(!articles) {
+    //     articleList = "there is no book record!";
+    // } else {
+    //     articleList = articles.map((article, k) => (
+    //       <ArticlesTable article={article} key={k} />
+    //     ));
+    // }
     const articles = this.state.articles;
-    console.log("PrintBook: " + articles);
-    let articleList;
-
-    if(!articles) {
-        articleList = "there is no book record!";
-    } else {
-        articleList = articles.map((article, k) => (
-          <ArticlesTable article={article} key={k} />
-        ));
-    }
-
     return (
       <div className="ShowBookList">
         <div className="container">
@@ -47,6 +73,7 @@ class ShowArticlesList extends Component {
               <div className="header-center">
                 <h2 className="display-4 text-center">Articles List</h2>
               </div>
+              <input type="text" id="searchTitle" onKeyUp={this.handleKeyUp} placeholder="Search for names.." title="Type in a name"></input>
               <table id="articleTable">
                 <tr>
                   <th>Title</th>
@@ -62,10 +89,37 @@ class ShowArticlesList extends Component {
               </table>
             </div>
           </div>
-          <div className="list">{articleList}</div>
+          {/* <div className="list">{articleList}</div> */}
+
+            {articles.map((article) => (
+              <div className ="searchArticles">
+                <div className="tableContainer">
+      
+                <table id="articleTable">
+                  <tr>
+                    <td>{article.title}</td>
+                    <td>{article.author}</td>
+                    <td>{article.journalName}</td>
+                    <td>{article.publicationYear}</td>
+                    <td>{article.claim}</td>
+                    <td>{article.sePractice}</td>
+                    <td>{article.resultOfEvidence}</td>
+                    <td>{article.researchType}</td>
+                    <td>{article.typeOfParticipant}</td>
+                  </tr>
+                {/* <br></br> */}
+              </table>
+              </div>
+            </div>
+            
+            ))}
+
+         
         </div>
       </div>
     );
+
+    
   }
 }
 
