@@ -6,6 +6,7 @@ import axios from "axios";
 
 import Table from "../components/evidence-table.js";
 import "../App.css";
+import Styles from "../components/table-style.js";
 
 function App() {
   const [data, setData] = useState([]);
@@ -67,7 +68,9 @@ function App() {
 
   return (
     <div className="App">
-      <Table columns={columns} data={data} />
+      <Styles>
+        <Table columns={columns} data={data} />
+      </Styles>
     </div>
   );
 }
