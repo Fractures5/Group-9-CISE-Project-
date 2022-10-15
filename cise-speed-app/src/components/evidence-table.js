@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import articles from "../dummydata/articles.js";
+//import articles from "../dummydata/articles.js";
 import { useTable, useSortBy, usePagination, useFilters } from "react-table";
 
 const Table = ({ columns, data }) => {
@@ -45,11 +45,13 @@ const Table = ({ columns, data }) => {
   // Render Data Table UI
   return (
     <>
+    <div className="searchArticleField">
       <input
-        value={filterInput}
-        onChange={handleFilterChange}
-        placeholder={"Search Title"}
-      />
+          value={filterInput}
+          onChange={handleFilterChange}
+          placeholder={"Search Title"}
+        />
+    </div>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (

@@ -173,3 +173,16 @@ textarea[type=text]{
   text-align: center;
   padding-bottom: 20px;
 }
+
+.searchArticleField input{
+  width: 20%;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  box-shadow: none;
+  text-align: left;
+  float: left;
+  font-size: 16px;
+}
+
