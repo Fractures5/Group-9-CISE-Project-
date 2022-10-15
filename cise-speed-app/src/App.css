@@ -184,6 +184,7 @@ textarea[type=text]{
   text-align: left;
   float: left;
   font-size: 16px;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .sePracticeDropdown select{
