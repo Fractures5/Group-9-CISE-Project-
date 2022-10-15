@@ -13,6 +13,7 @@ class ShowArticlesList extends Component {
     };
 
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.sortSEPractice = this.sortSEPractice.bind(this);
   }
 
   handleKeyUp() {
@@ -36,6 +37,28 @@ class ShowArticlesList extends Component {
       }
     console.log("reads bottom of function ");
 
+  }
+
+  sortSEPractice() {
+
+    console.log("triggering sortSEPractice function");
+
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("sePracticeList");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("articleTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+    console.log("reads bottom of sortSEPractice function ");
   }
 
   componentDidMount() {
@@ -73,6 +96,11 @@ class ShowArticlesList extends Component {
               <div className="header-center">
                 <h2 className="display-4 text-center">Articles List</h2>
               </div>
+              <select id="sePracticeList" onChange={this.sortSEPractice()} class='form-control'>
+                <option>TDD</option>
+                <option>Mob Programming</option>
+                <option>Agile Programming</option>
+              </select>
               <input type="text" id="searchTitle" onKeyUp={this.handleKeyUp} placeholder="Search for names.." title="Type in a name"></input>
               <table id="articleTable">
                 <tr>
@@ -114,7 +142,6 @@ class ShowArticlesList extends Component {
             
             ))}
 
-         
         </div>
       </div>
     );

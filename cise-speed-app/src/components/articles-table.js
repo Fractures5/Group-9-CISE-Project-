@@ -6,18 +6,8 @@ import '../App.css';
 const ArticlesTable = (props) => {
     const article = props.article;
     
-
-    
-    
-
     return (
-<<<<<<< HEAD
-      <div className ="searchArticles">
-        <div className="tableContainer">
-
-=======
       <div className="tableContainer">
->>>>>>> ce5830cc532cb79010fc40e800492e938102f4dd
         <table id="articleTable">
           <tr>
             <td>{article.title}</td>
@@ -32,7 +22,6 @@ const ArticlesTable = (props) => {
           </tr>
           {/* <br></br> */}
         </table>
-        </div>
       </div>
     
       //   <div className="card-container">
