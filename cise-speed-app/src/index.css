@@ -48,3 +48,22 @@ ul.header li a {
 .active {
   background-color: #0099FF;
 }
+
+table{
+  border-style: 1px;
+  background-color: white;
+  font-size: 20px;
+}
+
+th{
+  font-size: 25px;
+  background-color: #c1bebe;
+}
+
+/* tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+tr:hover {
+  background-color: rgb(191, 255, 223);
+}
