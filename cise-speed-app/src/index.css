@@ -32,7 +32,7 @@ ul.header li a {
 }
 
 .content {
-  background-color: #FFF;
+  /* background-color: #FFF; */
   padding: 20px;
 }
 
@@ -47,4 +47,25 @@ ul.header li a {
 
 .active {
   background-color: #0099FF;
+}
+
+table{
+  border-style: 1px;
+  background-color: white;
+}
+
+th{
+  font-size: 20px;
+  background-color: #c1bebe;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+tr:hover {
+  background-color: rgb(191, 255, 223);
+}
+
+td{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  word-break: break-all;
 }

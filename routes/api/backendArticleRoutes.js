@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 // Load article model
-const BackendArticles = require('../../models/backend-article-model');
+const BackendArticles = require('../../models/backend-article-model.js');
 
 // @route GET api/Submitted-Form-Details/Suggested-Articles
 // @description tests suggested articles route
@@ -16,7 +16,7 @@ router.get('/Suggested-Articles', (req, res) => res.send('backend articles route
 //@access Public
 router.get('/', (req, res) => {
     BackendArticles.find()
-    .then(speedarticles => res.json(books))
+    .then(backendArticleRoutes => res.json(backendArticleRoutes))
     .catch(err => res.status(404).json({ nobooksfound: 'No backend articles found' }));
 });
 
@@ -25,8 +25,8 @@ router.get('/', (req, res) => {
 // @access Public
 router.post('/', (req, res) => {
     BackendArticles.create(req.body)
-    .then(speedarticles => res.json({ msg: 'Backend article added successfully' }))
+    .then(backendArticleRoutes => res.json({ msg: 'Backend article added successfully' }))
     .catch(err => res.status(400).json({ error: 'Unable to add this backend article' }));
 });
 
-module.exports = router;
+module.exports = router; 
