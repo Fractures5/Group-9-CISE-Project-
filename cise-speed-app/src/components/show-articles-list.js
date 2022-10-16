@@ -60,7 +60,7 @@ function App() {
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-      const result = await axios("https://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes", data);
+      const result = await axios("http://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes");
       setData(result.data);
     })();
   }, []);
