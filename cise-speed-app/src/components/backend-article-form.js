@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import '../App.css';
-import axios from 'axios';
+import axios from 'axios'; 
 
 
 class BackendArticleForm extends Component {
@@ -42,6 +42,7 @@ class BackendArticleForm extends Component {
     axios
       .post('https://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes', data)
       .then(res => {
+        alert("Press 'OK' to confirm submission and return to the backend article submission form");
         this.setState({
           title:'',
           author:'',
@@ -66,11 +67,6 @@ class BackendArticleForm extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Backend Submit Article</h1>
-              <p className="lead text-center">
-                  Submit an Article
-              </p>
-
               <form noValidate onSubmit={this.onSubmit}>
                 <div className='form-group'>
                   <input
@@ -107,7 +103,7 @@ class BackendArticleForm extends Component {
 
                 <div className='form-group'>
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Publication Year'
                     name='publicationYear'
                     className='form-control'

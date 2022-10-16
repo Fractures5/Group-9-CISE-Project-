@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 // @access Public
 router.post('/', (req, res) => {
     BackendArticles.create(req.body)
-    .then(speedarticles => res.json({ msg: 'Backend article added successfully' }))
+    .then(backendArticleRoutes => res.json({ msg: 'Backend article added successfully' }))
     .catch(err => res.status(400).json({ error: 'Unable to add this backend article' }));
 });
 
