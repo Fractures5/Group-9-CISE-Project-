@@ -132,5 +132,95 @@ textarea[type=text]{
   color: #6c757d;
   font-size: 1em;
   padding: 10px 0 10px 0;
-}*/
+} */
+
+#articleTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
+  /* border: 3px solid rgb(0, 0, 0); */
+
+}
+
+#articleTable td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#articleTable tr{
+  background-color:rgb(255, 255, 255);
+  color: black;
+}
+#articleTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#articleTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#articleTable tr:hover {
+  background-color: rgb(191, 255, 223);
+}
+
+#articleTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.header-center{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.searchArticleField input{
+  width: 20%;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  box-shadow: none;
+  text-align: left;
+  float: left;
+  font-size: 16px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.sePracticeDropdown select{
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 20%;
+  padding: 5px;
+  /* margin-bottom: 20px; */
+  font-size: 18px;
+  border: 2px solid #ddd;
+  box-shadow: none;
+  text-align: left;
+  font-size: 16px;
+  float: right;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.pubYearsDropdown select{
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 10%;
+  padding: 5px;
+  /* margin-bottom: 20px; */
+  font-size: 18px;
+  border: 2px solid #ddd;
+  box-shadow: none;
+  text-align: left;
+  font-size: 16px;
+  float: right;
+  border: 2px solid rgb(0, 0, 0);
+  
+}
+
 
