@@ -1,11 +1,9 @@
 import React from "react";
-import { Route, NavLink, BrowserRouter as Router, Redirect } from "react-router-dom";
+import { Route, NavLink, BrowserRouter as Router} from "react-router-dom";
 
-import Home from "./pages/home-page.js";
 import SuggestArticle from "./pages/suggest-article-page.js";
 import NotFoundPage from "./pages/404";
 import BackendArticle from "./pages/backend-article-page.js";
-import ShowArticlesList from "./components/show-articles-list.js";
 import ShowDBArticles from "./pages/show-articles.js"
 import "./App.css";
 const App = () => {

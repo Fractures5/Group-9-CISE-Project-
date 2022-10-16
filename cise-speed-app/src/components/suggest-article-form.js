@@ -17,7 +17,7 @@ class SuggestArticleForm extends Component {
       articlePages:'',
       articleDOI:'',
       selectedSEPractice:'',
-      // articleBibtex:''
+      articleBibtex:''
     };
   }
 
@@ -38,11 +38,11 @@ class SuggestArticleForm extends Component {
       articlePages: this.state.articlePages,
       articleDOI: this.state.articleDOI,
       selectedSEPractice: this.state.selectedSEPractice,
-      // articleBibtex: this.state.articleBibtex
+      articleBibtex: this.state.articleBibtex
     };
 
     axios
-      .post('https://group9-cise-speed-app.herokuapp.com/api/articleRoutes', data)
+      .post('http://localhost:8082/api/articleRoutes', data)
       .then(res => {
         alert("Press 'OK' to confirm submission and return to the suggest article page");
         this.setState({
@@ -55,12 +55,12 @@ class SuggestArticleForm extends Component {
           articlePages:'',
           articleDOI:'',
           selectedSEPractice:'',
-          // articleBibtex:''
+          articleBibtex:''
         })
         this.props.history.push('/');
       })
       .catch(err => {
-        console.log(err);
+        console.log("Error in suggesting article!");
       })
   };
 
@@ -170,7 +170,7 @@ class SuggestArticleForm extends Component {
                   />
                 </div>
                 
-                {/* <div className='form-group'>
+                <div className='form-group'>
                   <textarea 
                   type='text'
                   placeholder='Paste BibTex file contents (Optional)'
@@ -179,7 +179,7 @@ class SuggestArticleForm extends Component {
                   value={this.state.articleBibtex}
                   onChange={this.onChange}
                   />
-                </div> */}
+                </div>
                 
                 <input
                     type="submit"
