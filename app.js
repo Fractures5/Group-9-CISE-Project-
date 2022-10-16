@@ -25,7 +25,7 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "cise-speed-app", "build", "index.html"))
 })
 
-app.get('/', (req, res) => res.send('Testing database submission form'));
+//app.get('/', (req, res) => res.send('Testing database submission form'));
 
 // Use routes
 app.use('/api/articleRoutes', suggestArticles);
