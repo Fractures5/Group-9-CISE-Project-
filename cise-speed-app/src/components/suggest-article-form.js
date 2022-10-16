@@ -70,8 +70,6 @@ class SuggestArticleForm extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Suggest Article</h1>
-
               <form noValidate onSubmit={this.onSubmit}>
                 <div className='form-group'>
                   <input
@@ -175,7 +173,7 @@ class SuggestArticleForm extends Component {
                 {/* <div className='form-group'>
                   <textarea 
                   type='text'
-                  placeholder='Paste BibTex file contents'
+                  placeholder='Paste BibTex file contents (Optional)'
                   name='articleBibtex'
                   className='form-control'
                   value={this.state.articleBibtex}
