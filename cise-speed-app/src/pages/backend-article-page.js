@@ -6,7 +6,7 @@ const BackendArticle = () =>  {
     <div>
         <div className="BackendArticleForm">
             <h2>Submit Article to SPEED Database</h2>
-                <p>This will be a form to allow the moderators/analyst to submit an article to have it be included in our SPEED repo and table article view.</p>
+                <p>This will be a form to allow the analyst to submit an article to have it be included in our SPEED repo and table article view.</p>
                     <br></br>
                 <BackendArticleForm/>
         </div>
