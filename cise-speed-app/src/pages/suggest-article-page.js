@@ -6,7 +6,7 @@ import SuggestArticleForm from "../components/suggest-article-form.js";
 const SuggestArticle = () =>  {
     return (
     <div>
-        <div class="SuggestArticleForm">
+        <div className="SuggestArticleForm">
             <h2>Submit Article</h2>
                 <p>This form allows submitters to submit an article for possible 
                     inclusion in our SPEED application.</p>
