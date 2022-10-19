@@ -58,7 +58,7 @@ function App() {
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-      const result = await axios("https://localhost:8082/api/backendArticleRoutes");
+      const result = await axios("http://localhost:8082/api/backendArticleRoutes");
       setData(result.data);
     })();
   }, []);
