@@ -1,10 +1,10 @@
 // app.js File
-//require('dotenv').config({ path: "./env"});
+require('dotenv').config({ path: "./env"});
 const express = require('express');
 const connectDB = require('./config/db');
 var cors = require('cors');
-//const path =  require('path');
-//const { response } = require('express');
+const path =  require('path');
+const { response } = require('express');
 
 // routes
 const suggestArticles = require('./routes/api/articleRoutes');
