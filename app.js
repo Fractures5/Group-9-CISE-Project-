@@ -29,7 +29,7 @@ app.get("*", (req, res) => {
 
 // Use routes
 app.use('/api/articleRoutes', suggestArticles);
-app.use('https://group9-cise-speed-app.herokuapp.com//api/backendArticleRoutes', backendArticles);
+app.use('/api/backendArticleRoutes', backendArticles);
 
 const port = process.env.PORT || 8082;
 
