@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import articles from "../dummydata/articles.js";
 import { useTable, useSortBy, usePagination, useFilters } from "react-table";
 
 const Table = ({ columns, data }) => {
