@@ -20,12 +20,11 @@ app.use(cors({origin: true, credentials: true}));
 // Init middleware
 app.use(express.json({extended: false}));
 
+//This code piece from line 24 to 27 needs to be uncommented to build and access Heroku, and have it commented to run locally
 app.use(express.static(path.join(__dirname, "./cise-speed-app/build")))
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "cise-speed-app", "build", "index.html"))
 })
-
-//app.get('/', (req, res) => res.send('Testing database submission form'));
 
 // Use routes
 app.use('/api/articleRoutes', suggestArticles);

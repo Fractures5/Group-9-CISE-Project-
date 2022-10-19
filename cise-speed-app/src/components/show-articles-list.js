@@ -58,7 +58,9 @@ function App() {
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-      const result = await axios("http://localhost:8082/api/backendArticleRoutes");
+      //This link with http is used instead of https and the link for the heroku application as it was not stable and we could not find a fix
+      //This is further explained in our Learning and Capability Learning Report in a seperate heading at the end that we talk about this issue
+      const result = await axios("http://localhost:8082/api/backendArticleRoutes");  
       setData(result.data);
     })();
   }, []);
