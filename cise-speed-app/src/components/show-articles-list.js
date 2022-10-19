@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 
@@ -60,7 +58,7 @@ function App() {
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-      const result = await axios("https://group9-cise-speed-app.herokuapp.com/api/backendArticleRoutes");
+      const result = await axios("http://localhost:8082/api/backendArticleRoutes");
       setData(result.data);
     })();
   }, []);
